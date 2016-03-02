@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="clash_of_clans.base_url">https://api.clashofclans.com/v1/</parameter>
+    </parameters>
+
+    <services>
+        <service id="clash_of_clans.httpclient" class="RaulConti\ClashOfClansBundle\Services\HttpClient\HttpClient">
+            <argument>%clash_of_clans.api_key%</argument>
+            <argument>%clash_of_clans.base_url%</argument>
+        </service>
+        <service id="clash_of_clans.api" class="RaulConti\ClashOfClansBundle\Services\ApiClient">
+            <argument type="service" id="clash_of_clans.httpclient" />
+        </service>
+    </services>
+
+</container>

@@ -2,7 +2,6 @@
 
 namespace RaulConti\ClashOfClansBundle\Services;
 
-use GuzzleHttp;
 use RaulConti\ClashOfClansBundle\Services\HttpClient\HttpClientInterface;
 use RaulConti\ClashOfClansBundle\Mapper\ClashOfClansMapper;
 use Symfony\Component\OptionsResolver\OptionsResolver;

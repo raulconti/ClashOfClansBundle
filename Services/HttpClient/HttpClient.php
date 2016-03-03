@@ -3,6 +3,7 @@
 namespace RaulConti\ClashOfClansBundle\Services\HttpClient;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 use RaulConti\ClashOfClansBundle\Services\HttpClient\HttpClientInterface;
 
 /**
@@ -35,7 +36,7 @@ class HttpClient implements HttpClientInterface
 
             return $response;
 
-        } catch(GuzzleHttp\Exception\RequestException $e) {
+        } catch(RequestException $e) {
             $error = json_decode($e->getResponse()->getBody(), true);
             echo $error['message'];
         }

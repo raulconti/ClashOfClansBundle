@@ -160,6 +160,4 @@ class ApiClient
 
         return $params;
     }
-
-
 }

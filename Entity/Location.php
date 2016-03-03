@@ -39,7 +39,7 @@ class Location
         return $this->name;
     }
 
-    public function getIsCountry()
+    public function isCountry()
     {
         return $this->isCountry;
     }
@@ -59,7 +59,7 @@ class Location
         $this->name = $name;
     }
 
-    public function setIsCountry($isCountry)
+    public function setCountry($isCountry)
     {
         $this->isCountry = $isCountry;
     }

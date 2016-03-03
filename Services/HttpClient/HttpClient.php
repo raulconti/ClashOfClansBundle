@@ -2,7 +2,7 @@
 
 namespace RaulConti\ClashOfClansBundle\Services\HttpClient;
 
-use GuzzleHttp;
+use GuzzleHttp\Client;
 use RaulConti\ClashOfClansBundle\Services\HttpClient\HttpClientInterface;
 
 /**
@@ -17,7 +17,7 @@ class HttpClient implements HttpClientInterface
     {
         $this->apiKey = $apiKey;
         $this->baseUrl = $baseUrl;
-        $this->guzzle = new GuzzleHttp\Client(['base_uri' => $this->getBaseUrl()]);
+        $this->guzzle = new Client(['base_uri' => $this->getBaseUrl()]);
     }
 
     /**

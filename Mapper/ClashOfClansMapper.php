@@ -185,7 +185,7 @@ class ClashOfClansMapper
         $entity->setName(
             isset($location['name']) ? $location['name'] : null
         );
-        $entity->setIsCountry(
+        $entity->setCountry(
             isset($location['isCountry']) ? $location['isCountry'] : null
         );
         $entity->setCountryCode(
